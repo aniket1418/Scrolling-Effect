@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+
+
+<style>
+  body{
+  font-family: tahoma;
+  background: #1b1b1b;
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+.info .img-wrapper{
+  position: relative;
+}
+
+.info .img-wrapper .absolute{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+}
+
+.info .max-vh-80{
+  max-height: 80vh;
+
+}
+p{
+  width: 100%;
+}
+</style>
+<body>
+<!-- <nav>
+ <div class="logo">
+  
+ </div>
+ <div class="hamburger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ <ul class="nav-links">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Solutions</a></li>
+  <li><a href="#">Products</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact Us</a></li>
+  
+ </ul>
+</nav>
+ -->
+
+
+ <h1 class="text-center">SOMETHING MADE ME ATTRACK TOWARDS IT</h1>
+ <p class="container">
+   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+ </p>
+
+ <main> 
+   <section id="features" class="desc mt-5 py-5">
+     <section class="info mt-5 py-5">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-5 lax"  data-lax-preset="5" >
+             <div class="text-muted">AMAZING</div>
+             <h2 class="display-4 font-weight-bold mb-3">
+               CREATIVITY IT IS
+             </h2>
+             <p class="lead">
+               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+             </p>
+             <a href="" class="btn-round btn btn-primary">Shop our Product</a>
+           </div>
+
+           <div class="col-md-6 mt-5 text-right">
+             <div class="img-wrapper mt-5 d-inline-block">
+               <img src="mobile.png" class="img-fluid max-vh-80 lax" data-lax-translate-x="(vh*0.2) -150, (vh*0.5) -1" data-lax-anchor="self">
+               <img src="mobile.png" class="img-fluid max-vh-80 lax absolute" data-lax-translate-x="" data-lax-anchor="self">
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+   </section>
+ </main>
+
+
+</body>
+<!-- <script>
+	const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");hamburger.addEventListener('click', ()=>{//Animate Links
+navLinks.classList.toggle("open");
+links.forEach(link => {
+link.classList.toggle("fade");
+});//Hamburger Animation
+hamburger.classList.toggle("toggle");
+});
+</script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="animation.js"></script>
+<script>
+      $(document).ready(function(){
+          lax.setup();
+          const updateLax = () => {
+            lax.update(window.scrollY);
+            window.requestAnimationFrame(updateLax);
+          }
+          window.requestAnimationFrame(updateLax);
+          window.addEventListener("resize", function(){
+            lax.updateElements();
+          });
+      });
+</script>
+</html>
